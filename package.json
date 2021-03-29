@@ -1,0 +1,40 @@
+{
+  "name": "realhellword",
+  "version": "1.0.0",
+  "description": "An authentication api that uses word detection to prohibit English-language dictionary words from passwords",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koyeary/realhellword.git"
+  },
+  "author": "Kat Yeary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koyeary/realhellword/issues"
+  },
+  "homepage": "https://github.com/koyeary/realhellword#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "client": "0.0.1",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.2",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.17",
+    "stripe": "^8.127.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  }
+}
